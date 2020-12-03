@@ -579,7 +579,9 @@ public interface MovementHelper extends ActionCosts, Helper {
         }
         return PlaceResult.NO_OPTION;
     }
-
+    static boolean isTransparent(Block b) {
+        return b == Blocks.AIR;
+    }
     enum PlaceResult {
         READY_TO_PLACE, ATTEMPTING, NO_OPTION;
     }
